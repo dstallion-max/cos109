@@ -9,15 +9,22 @@ body {
     line-height: 1.6;
     background-color: black;
 }
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 header {
     background: #43518a;
     color: #fff;
-    padding: 20px 0;
+    padding: 1.2rem 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 header h1 {
@@ -49,7 +56,7 @@ section {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto; */
-    /* opacity: 0; */
+   
 }
 
 /* #about, #projects, #contact {
@@ -110,10 +117,10 @@ form input, form textarea {
 }
 .me{
     margin-top: 200px;
-    font-size: 48px;
+    font-size: 3rem;
 }
 .mes{
-    font-size: 25px;
+    font-size: 1.8rem;
     line-height: 50px;
 }
 
@@ -124,13 +131,16 @@ a{
 #abouts{
     color: black;
     background-color: white;
-    height: 98vh;
+    width: 100%;
+    box-sizing: border-box;
+    /* height: 98vh; */
     padding-top: 90px;
     padding: 20px 100px;
     padding-bottom: -10px; 
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 #abouts > section:nth-child(1){
     padding-top: 150px;
@@ -149,12 +159,12 @@ a{
     width: 60vh;
 }
 .hue{
-    font-size: 45px;
+    font-size: 3.8rem;
     padding-bottom: 20px;
     color: #43518a;
 }
 .hues{
-    font-size: 20px;
+    font-size: 1.3rem;
     line-height: 50px;
 }
 #projects{
@@ -198,6 +208,99 @@ a{
     font-size: 35px;
     padding-left: 430px;
 }
+/* 
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    #abouts{
+        padding: 20px 10px;
+        flex-direction: column;
+    }
+    .project-gallery{
+        grid-template-columns: 1fr;
+    }
+    button{
+        width: 100%;
+    }
+    .cont{
+        padding-left:0;
+        font-size: 28px;
+        text-align: center;
+    }
+}
+    @media (max-width: 480px) {
+        header {
+            padding: 10px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    .me {
+        font-size: 36px;
+        margin-top: 100px;
+    }
+    .mes {
+        font-size: 20px;
+        line-height: 35px;
+    }
+} */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        align-items: center;
+        width: 100%; /* Ensure the navbar takes up the full width */
+    }
+    header {
+        padding: 10px 5%;
+    }
+}
+@media (max-width: 480px) {
+    nav ul {
+        gap: 15px; /* Adjust gap between items */
+    }
+    header {
+        padding: 10px 10px; /* Adjust header padding for very small screens */
+    }
+}
+@media (max-width: 320px) {
+    nav ul {
+        gap: 10px; /* Further reduce gap between items */
+        padding-left: 10px; /* Adjust padding to prevent overflow */
+        padding-right: 10px; /* Adjust padding to prevent overflow */
+    }
+    header {
+        padding: 8px 5%; /* Adjust header padding for very small screens */
+    }
+    #abouts {
+        padding: 20px 5px;
+    }
 
+    .me {
+        font-size: 28px;
+        margin-top: 80px;
+        margin-left: -90px;
+    }
+
+    .mes {
+        font-size: 16px;
+        line-height: 25px;
+        margin-left: -90px;
+    }
+
+    .image {
+        width: 60vw;
+    }
+    button{
+        margin-left: -90px;
+    }
+}
 
 
