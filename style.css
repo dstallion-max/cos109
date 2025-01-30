@@ -301,6 +301,13 @@ a{
             height: auto; /* Maintain aspect ratio */
             margin-top: 20px;
         }
+        form input, 
+        form textarea, 
+        button {
+            width: 90%;
+            max-width: 400px;
+        }
+    }
     
 }
 @media (max-width: 320px) {
@@ -364,6 +371,12 @@ a{
     } */
     button{
         margin-left: -90px;
+    }
+    form input, 
+    form textarea, 
+    button {
+        width: 90%;
+        max-width: 400px;
     }
 }
 
