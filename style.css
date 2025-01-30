@@ -50,14 +50,15 @@ nav ul li a {
     font-family: "Gill Sans Extrabold", sans-serif;
 }
 
-section {
-    /* padding: 20px;
+/* section {
+     padding: 20px;
     margin: 20px 0;
     max-width: 1000px;
     margin-left: auto;
-    margin-right: auto; */
+    margin-right: auto; 
+    
    
-}
+} */
 
 /* #about, #projects, #contact {
     background-color: #f4f4f4;
@@ -128,31 +129,29 @@ a{
     text-decoration: none; 
     color: white;
 }
-#abouts{
+#abouts {
     color: black;
     background-color: white;
     width: 100%;
     box-sizing: border-box;
-    /* height: 98vh; */
-    padding-top: 90px;
-    padding: 20px 100px;
-    padding-bottom: -10px; 
+    padding: 90px 100px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-#abouts > section:nth-child(1){
-    padding-top: 150px;
+#abouts > section:nth-child(1) {
     color: black;
     width: 50%;
-    padding-left: 50px;
-   
+    padding: 150px 50px 0 50px;
 }
-#abouts > section:nth-child(2){
+#abouts > section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     padding-top: 40px;
-    padding-left: 150px;
-   
+    padding-left: 0; /* Remove excessive left padding */
 }
 .image{
     height: 90%;
@@ -205,8 +204,9 @@ a{
 }
 .cont{
     padding-top: 20px;
-    font-size: 35px;
-    padding-left: 430px;
+    font-size: 3rem;
+    /* padding-left: 430px; */
+    text-align: center;
 }
 /* 
 @media (max-width: 768px){
@@ -269,6 +269,39 @@ a{
     header {
         padding: 10px 10px; /* Adjust header padding for very small screens */
     }
+    @media (max-width: 480px) {
+        #abouts {
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items */
+            text-align: center; /* Align text */
+            padding: 20px 10px; /* Reduce padding */
+        }
+    
+        #abouts > section:nth-child(1),
+        #abouts > section:nth-child(2) {
+            width: 80%; /* Make text and image take the same width */
+            max-width: 300px; /* Set a reasonable max width */
+        }
+    
+        #abouts > section:nth-child(1) {
+            padding-left: 0;
+            padding-top: 20px;
+            order: 1; /* Ensure text is first */
+        }
+    
+        #abouts > section:nth-child(2) {
+            padding-left: 0;
+            display: flex;
+            justify-content: center; /* Center image */
+            order: 2; /* Ensure image is second */
+        }
+    
+        .image {
+            width: 100%; /* Make image same width as text */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px;
+        }
+    
 }
 @media (max-width: 320px) {
     nav ul {
@@ -279,8 +312,39 @@ a{
     header {
         padding: 8px 5%; /* Adjust header padding for very small screens */
     }
-    #abouts {
-        padding: 20px 5px;
+    @media (max-width: 480px) {
+        #abouts {
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items */
+            text-align: center; /* Align text */
+            padding: 20px 10px; /* Reduce padding */
+        }
+    
+        #abouts > section:nth-child(1),
+        #abouts > section:nth-child(2) {
+            width: 80%; /* Make text and image take the same width */
+            max-width: 300px; /* Set a reasonable max width */
+        }
+    
+        #abouts > section:nth-child(1) {
+            padding-left: 0;
+            padding-top: 20px;
+            order: 1; /* Ensure text is first */
+        }
+    
+        #abouts > section:nth-child(2) {
+            padding-left: 0;
+            display: flex;
+            justify-content: center; /* Center image */
+            order: 2; /* Ensure image is second */
+        }
+    
+        .image {
+            width: 100%; /* Make image same width as text */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px;
+        }
+    
     }
 
     .me {
@@ -295,9 +359,9 @@ a{
         margin-left: -90px;
     }
 
-    .image {
+    /* .image {
         width: 60vw;
-    }
+    } */
     button{
         margin-left: -90px;
     }
